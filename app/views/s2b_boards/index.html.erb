@@ -22,6 +22,8 @@
     $( "#date_end_").datepicker();
     $( "#date_start_").datepicker("option", "dateFormat", "yy-mm-dd");
     $( "#date_end_").datepicker("option", "dateFormat", "yy-mm-dd");
+    $( "#date_start_").datepicker( 'setDate', $( "#date_start_" ).attr('value') );
+    $( "#date_end_").datepicker( 'setDate', $( "#date_end_" ).attr('value') );
     
     $(".icon_new_issue").live('click',function(){
       $("#new_issue_form").show();
@@ -205,10 +207,14 @@
   };
   
   function editDate(id){
+    var sdate = $("#new_date_start_" + id ).attr('value');
+    var edate = $("#new_date_end_" + id ).attr('value');
     $("#new_date_start_" + id).datepicker();
     $("#new_date_end_" + id).datepicker();
     $("#new_date_start_" + id).datepicker("option", "dateFormat", "yy-mm-dd");
-    $("#new_date_end_" + id).datepicker("option", "dateFormat", "yy-mm-dd");  
+    $("#new_date_end_" + id).datepicker("option", "dateFormat", "yy-mm-dd");
+    $("#new_date_start_" + id).datepicker("setDate", sdate );
+    $("#new_date_end_" + id).datepicker("setDate", edate );
   }
   
   function s2b_sortable(){

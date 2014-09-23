@@ -65,8 +65,12 @@ $(document).ready(function() {
           buttonImage: "../images/calendar.png",
           buttonImageOnly: true
         });
+    var new_sdate = $("#new_date_start").attr("value");
+    var new_edate = $("#new_date_end").attr("value");
     $( "#new_date_start").datepicker("option", "dateFormat", "yy-mm-dd");
+    $( "#new_date_start").datepicker( 'setDate', new_sdate  );
     $( "#new_date_end").datepicker("option", "dateFormat", "yy-mm-dd");
+    $( "#new_date_end").datepicker( 'setDate', new_edate );
     
     $('.btn_cancel_update').live("click",function(){
       $('.form_edit_issue').hide();

@@ -63,11 +63,11 @@
     <div>
       <div class="col-50">
         <label class="text-left"><%= l(:label_start_date) %></label>
-        <input class="value_content right-filter width-100 " name="issue[start_date]" id="new_date_start_<%= issue.id %>"  value="<%= format_date(issue.start_date) %>" style="width: 100px">     
+        <input class="value_content right-filter width-100 " name="issue[start_date]" id="new_date_start_<%= issue.id %>"  value="<%= issue.start_date %>" style="width: 100px">     
       </div>
       <div class="col-50">
         <label class="text-left" ><%= l(:label_end_date) %></label>
-        <input class="value_content right-filter width-100 " name="issue[due_date]"  id="new_date_end_<%= issue.id %>" value="<%= format_date(issue.due_date) %>" style="width: 100px" />    
+        <input class="value_content right-filter width-100 " name="issue[due_date]"  id="new_date_end_<%= issue.id %>" value="<%= issue.due_date %>" style="width: 100px" />    
       </div>
     </div>
     

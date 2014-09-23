@@ -37,10 +37,10 @@
     <% end %>
     
     <% if @issue.safe_attribute? 'start_date' %>
-      <p><%= f.label :start_date %><%= f.label :start_date %><%= f.text_field :start_date, :size => 10, :disabled => !@issue.leaf?, :required => @issue.required_attribute?('start_date'), :id => "new_date_end", :value => format_date(@issue.start_date) %></p>
+      <p><%= f.label :start_date %><%= f.label :start_date %><%= f.text_field :start_date, :size => 10, :disabled => !@issue.leaf?, :required => @issue.required_attribute?('start_date'), :id => "new_date_end", :value => @issue.start_date %></p>
     <% end %>
     <% if @issue.safe_attribute? 'due_date' %>
-      <p><%= f.label :due_date %><%= f.text_field :due_date, :size => 10, :disabled => !@issue.leaf?, :required => @issue.required_attribute?('due_date'), :id => "new_date_start", :value => format_date(@issue.due_date) %></p>
+      <p><%= f.label :due_date %><%= f.text_field :due_date, :size => 10, :disabled => !@issue.leaf?, :required => @issue.required_attribute?('due_date'), :id => "new_date_start", :value => @issue.due_date %></p>
     <% end %>
     
     <% if @issue.safe_attribute? 'estimated_hours' %>
